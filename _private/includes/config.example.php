@@ -2,6 +2,7 @@
 // Kopieer dit bestand naar config.php met je eigen gegevens
 // config.php wordt niet naar Github gestuurd, wel zo veilig.
 // Zet dus NOOIT in dit bestand je geheime gegevens, deze dient alleen als voorbeeld
+//test
 
 $config = [
 	'DB'       => [
