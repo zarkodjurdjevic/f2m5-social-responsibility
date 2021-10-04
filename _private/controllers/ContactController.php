@@ -10,12 +10,12 @@ namespace Website\Controllers;
  * Geeft de gegevens aan de "view" laag (HTML template) om weer te geven
  *
  */
-class RegistrationController {
+class ContactController {
 
-	public function registrationForm() {
+	public function ContactForm() {
 
 		$template_engine = get_template_engine();
-		echo $template_engine->render('register_form');
+		echo $template_engine->render('Contact_form');
 
 	}
 
