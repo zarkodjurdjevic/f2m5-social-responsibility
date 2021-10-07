@@ -1,10 +1,15 @@
 <?php $this->layout('layouts::website1');?>
-
-<?php $this->start('sidebar')?>
-<img src="/imagesfot.jpg" alt="">
-<?php $this->stop()?>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
+</ul>
 
 
    
@@ -18,7 +23,9 @@
 <main>
 <div class="container">
 		<div class="contact-box">
-			<div class="left"></div>
+			<div class="left">
+				
+			</div>
 			<div class="right">
                 
 
@@ -33,6 +40,24 @@
 		</div>
 	</div>
 </main>
+</form>
+<footer>
+      <div class="footer-content">
+          <h3 class="footer3">Transformers Community!</h3>
+          <p class="par3">volg ons op onze socials hieronder!</p>
+          <ul class="socials">
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+      </div>
+      
+    </footer>
+    <footer class="footer2">
+      <p class="par1">copyright &copy;2021</p>
+      
+    </footer>
 
 
 

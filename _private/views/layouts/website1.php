@@ -14,14 +14,11 @@
 <body>
 <div class="container">
     <header>
+        <h1></h1>
         
     </header>
     <nav>
-		<?php if ( $this->section( 'navigation' ) ): ?>
-			<?php echo $this->section( 'navigation' ) ?>
-		<?php else: ?>
-			<?php echo $this->fetch( '_navigation' ) ?>
-		<?php endif ?>
+	
     </nav>
     <main>
         <section class="content">
@@ -32,7 +29,7 @@
         </aside>
     </main>
     <footer>
-        &copy; <?php echo date('Y')?>
+        
     </footer>
 </div>
 <?php $this->start( 'javascript' ) ?>

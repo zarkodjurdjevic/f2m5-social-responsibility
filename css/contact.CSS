@@ -3,6 +3,7 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-family: 'Quicksand', sans-serif;
+	
     
 }
 
@@ -28,7 +29,7 @@ body{
 	height: 100%;
 	left: 0;
 	top: 0;
-	background: url("images/fot.jpg") no-repeat center;
+	background: url("/images/con1.jpg") no-repeat center;
 	background-size: cover;
 	filter: blur(50px);
 	z-index: -1;
@@ -118,7 +119,75 @@ textarea{
 	background-size: cover;
 	height: 100%;
 }
+.footer2{
+    background-color: rgb(43, 42, 42);
+    height: 100px;
+    
+    
+  }
+  .footer3{
+    font-size: 3rem;
+    font-weight: 450;
+    text-transform: capitalize;
+    line-height: 3rem;
+    margin-top: 150px;
+    color: white;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+  }
+  
+  .socials{
+    letter-spacing: 100px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    font-size: 90px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-left: 50px;
+    
+    
+
+  }
+  .footer-content{
+    width: 100%;
+    background-color: rgb(53, 52, 52);
+    height: 300px;
+    margin-bottom: -30px;
+    
+  }
+
+  .par3{
+    font-size: 40px;
+    color: white;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .par1{
+    font-size: 25px;
+    color: white;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    
+    
+    
+
+  }
+
+  
 @media screen and (max-width: 880px){
 	.contact-box{
 		grid-template-columns: 1fr;
