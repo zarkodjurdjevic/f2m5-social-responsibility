@@ -9,3 +9,38 @@ function getUsers() {
 
 	return $statement->fetchAll();
 }
+
+function getAllGebruikers(){
+	$connection = dbConnect();
+    $sql = 'SELECT * FROM `gebruikers`';
+    $statement = $connection->query($sql);
+    return $statement->fetchAll();
+}
+function addGebruiker($email, $wachtwoord){
+	$connection = dbConnect();
+    $sql = "INSERT INTO `gebruikers` (`id`, `email`, `wachtwoord`) VALUES (NULL, :email, :wachtwoord );"; 
+    $statement = $connection->prepare($sql);
+    $Result = $statement->execute([
+        'email' => $email,
+        'wachtwoord' => $wachtwoord
+	
+    ]);
+	return $Result;
+	
+
+}
+
+function updateGebruikers($gebruikers, $newemail, $newwachtwoord){
+    $connection = dbConnect();
+    $sql = "UPDATE `gebruikers` SET `email` = :new_email, `wachtwoord` = :new_wacht WHERE `gebruikers`.`id` = :gebruikers_id;";
+    $statement = $connection->prepare($sql);
+    $result = $statement->execute([
+        'new_email' => $newemail,
+        'new_wacht' => $newwachtwoord,
+        'gebruikers_id' => $gebruikers
+
+
+    ]);
+    return $result;
+
+}

@@ -3,6 +3,7 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-family: 'Quicksand', sans-serif;
+	top: 70px;
 	
     
 }
@@ -58,7 +59,7 @@ body{
 h2{
 	position: relative;
 	padding: 0 0 10px;
-	margin-bottom: 10px;
+	top: 5px;
 }
 
 h2:after{
@@ -71,6 +72,7 @@ h2:after{
     width: 50px;
     border-radius: 2px;
     background-color: #4859f0;
+	top: 25px;
 }
 
 .field{
@@ -82,6 +84,7 @@ h2:after{
 	font-size: 1.1rem;
 	margin-bottom: 22px;
 	transition: .3s;
+	border: solid 1px;
 }
 
 .field:hover{
@@ -160,7 +163,7 @@ textarea{
     width: 100%;
     background-color: rgb(53, 52, 52);
     height: 300px;
-    margin-bottom: -30px;
+    
     
   }
 
@@ -183,9 +186,36 @@ textarea{
     place-items: center;
     
     
-    
+    }
+	.nav1{
+		list-style-type: none;
+    	margin: 0;
+    	padding: 0;
+    	overflow: hidden;
+    	background-color: rgba(71, 70, 70, 0.733);
+    	position: fixed;
+    	top: 0;
+    	width: 100%;
+	}
+	.knop{
+		float: left;
+		border-right:1px solid #bbb;
+		  
 
-  }
+	}
+	.knop:last-child{
+		border-right: 1px solid #bbb;
+	}
+	.knop a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	  }
+	.knop a:hover:not(.active) {
+		background-color: #111;
+	  }
 
   
 @media screen and (max-width: 880px){
@@ -195,5 +225,6 @@ textarea{
 	.left{
 		height: 200px;
 	}
+	
 }
   

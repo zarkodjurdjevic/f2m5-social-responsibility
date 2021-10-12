@@ -4,11 +4,11 @@
 
 
 
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a href="#about">About</a></li>
+<ul class="nav1">
+  <li class="knop"><a href="#home">Home</a></li>
+  <li class="knop"><a href="#news">Over ons</a></li>
+  
+  <li class="knop"><a href="#about">Word Transformer</a></li>
 </ul>
 
 
@@ -46,16 +46,16 @@
           <h3 class="footer3">Transformers Community!</h3>
           <p class="par3">volg ons op onze socials hieronder!</p>
           <ul class="socials">
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/transformer.community/"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/transformers.community"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCvN0_IYGVy6s1jFj2enGIsw"><i class="fa fa-youtube"></i></a></li>
           </ul>
       </div>
       
     </footer>
     <footer class="footer2">
-      <p class="par1">copyright &copy;2021</p>
+      <p class="par1">&copy;2021 Transformers Community</p>
       
     </footer>
 
