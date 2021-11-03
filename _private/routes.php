@@ -17,6 +17,12 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	SimpleRouter::POST( '/registreren/verwerken', 'RegistrationController@handleRegistrationForm' )->name( 'register.handle' );
 	SimpleRouter::get( '/registreren/bedankt', 'RegistrationController@registrationThankYou' )->name( 'register.thankyou' );
 
+	//login routes
+	SimpleRouter::get( '/login', 'LoginController@loginForm' )->name( 'login.form' );
+	SimpleRouter::POST( '/login/verwerken', 'LoginController@handleLoginForm' )->name( 'login.handle' );
+	SimpleRouter::get( '/ingelogd/dashboard', 'LoginController@userDashbboard' )->name( 'login.dashboard' );
+	
+
 
 
 	SimpleRouter::get( '/test-database', 'TestController@queriesTesten');

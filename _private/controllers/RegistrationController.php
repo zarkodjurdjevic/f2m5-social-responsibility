@@ -23,38 +23,16 @@ class RegistrationController {
 
 	public function handleRegistrationForm(){
 	// hier wordt het form in verwerkt en doorgestuurd
-		$errors = [];
 
-		//validatie email geldig
-		$email    = filter_var( $_POST['email'], FILTER_VALIDATE_EMAIL);
-		$wachtwoord = trim( $_POST['wachtwoord']);
-
-		if ( $email === false ) {
-        //geen email ingevuld 
-		}
-
-		if ( empty ($wachtwoord) || strlen($wachtwoord) < 6){
-			//geen geldige wachtwoord
-		}
-
-		if ( count($errors) === 0 ) {
+		$result = validateRegistrationData($_POST);
+		
+		if ( count($result['errors']) === 0 ) {
 			
-			
-			$connection = dbConnect();
-			$sql        = "SELECT * FROM `gebruikers` WHERE `email` = :email";
-			$statement  = $connection->prepare($sql);
-			$statement->execute([ 'email' => $email]);
 
-			if ( $statement->rowCount()===0) {
-				$sql   = "INSERT INTO `gebruikers` (`email`, `wachtwoord`) VALUES (:email, :wachtwoord)";
-				$statement= $connection->prepare($sql);
-				$safe_password = password_hash($wachtwoord, PASSWORD_DEFAULT);
-				$params        = [
-					'email' => $email,
-					'wachtwoord' => $safe_password	
-
-				];
-				$statement->execute($params);
+			if (userNotRegistered($result['data']['email'])) {
+				
+				createUser($result['data']['email'], $result['data']['wachtwoord']);
+				
 				$bedanktUrl = url('register.thankyou');
 				redirect($bedanktUrl);
 				 
@@ -65,7 +43,7 @@ class RegistrationController {
 			}
 		}
 		$template_engine = get_template_engine();
-		echo $template_engine->render('register_Form', ['errors' => $errors]);
+		echo $template_engine->render('register_Form', ['errors' => $result['errors']]);
 	
 	}
 
